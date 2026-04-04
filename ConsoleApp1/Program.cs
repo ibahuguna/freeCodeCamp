@@ -2,14 +2,30 @@
 
 Calculator calculator = new Calculator();
 double num1, num2;
-string operation;
+string operation, input1, input2;
 string cont = "y";
 while (cont == "y" || cont == "Y")
 {
-    Console.Write("Enter a number : ");
-    num1 = Convert.ToDouble(Console.ReadLine());
-    Console.Write("Enter another number : ");
-    num2 = Convert.ToDouble(Console.ReadLine());
+    Console.Write("Enter first number : ");
+    input1 = Console.ReadLine();
+    if (!Double.TryParse(input1, out num1))
+    {
+        Console.WriteLine("Invalid input, please try again.");
+        continue;
+    }
+
+    while (true) 
+    { 
+        Console.Write("Enter second number : ");
+        input2 = Console.ReadLine();
+        if (!Double.TryParse(input2, out num2))
+        {
+            Console.WriteLine("Invalid input, please try again.");
+            continue;
+        }
+        break;
+    }
+
     Console.Write("Select operation (+, -, *, /) : ");
     operation = Console.ReadLine();
 
