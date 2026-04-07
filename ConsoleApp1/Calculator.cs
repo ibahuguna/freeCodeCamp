@@ -53,7 +53,7 @@ namespace ConsoleApp1
                     break;
                 }
 
-                Console.Write("Select operation (+, -, *, /) : ");
+                Console.Write("Select operator (+, -, *, /) : ");
                 operation = Console.ReadLine();
 
                 switch (operation)
@@ -74,10 +74,10 @@ namespace ConsoleApp1
                             Console.WriteLine("Cannot divide by 0!");
                         break;
                     default:
-                        Console.WriteLine("Invalid operation!");
+                        Console.WriteLine("Invalid operator!");
                         break;
                 }
-                Console.Write("Do you want to try again? (y/n) : ");
+                Console.Write("Do you want to try again? Type 'Y' or 'y' to continue : ");
                 cont = Console.ReadLine();
             }
 
